@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="modal.css">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Allura|Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ecb9b4e009.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    <title>Algebra VU</title>
+</head>
+<body>
+
+
+<div class="topnav">
+    <div class="logo">
+        <a href="#"><img id=logo src="img/logo.png"></a>
+    </div>
+    <div class="linkovi">
+    <a href="#"><i class="fas fa-home"></i> Pocetna</a>
+    <a href="o-nama.html"><i class="far fa-comments"></i> O nama</a>
+    <a href="novosti/novosti.html"><i class="fas fa-info-circle"></i> Novosti</a>
+    <a href="nastavniplan.html"><i class="fas fa-info-circle"></i> Nastavni plan</a>
+    <a data-fancybox data-src="#modal" href="javascript:;"><i class="fas fa-envelope"></i> Kontakt</a>
+   
+    </div>
+</div>
+
+<!-- MODALNI PROZOR-->
+<div style="display: none;" id="modal" class="modal-box">
+    <div id="modal-naslov"><h1><i class="fas fa-envelope"></i> Kontaktirajte nas</h1></div>
+    <hr>
+    <div class="modal-forma-div">
+    <form action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="post">
+        <label for="ime">Puno ime:</label><br>
+        <input type="text" id="txtname" name="name" class="input-style"><br>
+        <label for="prezime">E-mail:</label><br>
+        <input type="text" id="txtemail" name="email"class="input-style"><br>
+        <label>Vaznost poruke:</label><br>
+            <select id="lista" name="importance" class="input-style">
+                <option value = "high">Visoka</option>
+                <option value = "low">Niska</option>
+            </select><br>
+        <label>Vasa poruka: </label><br>
+            <textarea name="message" id="txtmessage" class="text-style">
+            </textarea>
+        <label for="newsletter">Primaj newsletter: </label> 
+        <input type="checkbox" id="newsletter" name="newsletter" value="newsletter">
+        <br>
+        <input type="submit" value="Pošalji" class="modal-botun">
+        <button data-fancybox-close class="modal-botun2">Odustani</button>
+      </form>
+    </div>
+  </div>
+
+<!--VIDEO TEKST-->
+<div id="outer">
+<div id="text-video">
+    <video id="video" autoplay muted loop>
+        <source src="vid/typingOnlaptop.mp4" type="video/mp4">
+    </video>
+<div id="text">
+    <span id="myElement"></span>
+</div>
+</div>
+</div>
+
+<!-- TypeIt JS -->
+<script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+<script src="js/skripta.js"></script>
+</body>
+</html>

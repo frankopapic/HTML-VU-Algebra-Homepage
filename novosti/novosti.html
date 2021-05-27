@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="novosti.css">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Allura|Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ecb9b4e009.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Novosti</title>
+</head>
+<body>
+    
+    <div class="topnav">
+        <div class="logo">
+            <a href="#"><img id=logo src="../img/logo.png"></a>
+        </div>
+        <div class="linkovi">
+        <a href=/index.html><i class="fas fa-home"></i> Pocetna</a>
+        <a href="../o-nama.html"><i class="far fa-comments"></i> O nama</a>
+        <a href="novosti.html"><i class="fas fa-info-circle"></i> Novosti</a>
+        <a href="../nastavniplan.html"><i class="fas fa-info-circle"></i> Nastavni plan</a>
+        <a data-fancybox data-src="#modal" href="javascript:;"><i class="fas fa-envelope"></i> Kontakt</a>
+       
+        </div>
+    </div>
+    
+    <!-- MODALNI PROZOR-->
+    <div style="display: none;" id="modal" class="modal-box">
+        <div id="modal-naslov"><h1><i class="fas fa-envelope"></i> Kontaktirajte nas</h1></div>
+        <hr>
+        <div class="modal-forma-div">
+        <form action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="post">
+            <label for="ime">Puno ime:</label><br>
+            <input type="text" id="txtname" name="name" class="input-style"><br>
+            <label for="prezime">E-mail:</label><br>
+            <input type="text" id="txtemail" name="email"class="input-style"><br>
+            <label>Vaznost poruke:</label><br>
+                <select id="lista" name="importance" class="input-style">
+                    <option value = "high">Visoka</option>
+                    <option value = "low">Niska</option>
+                </select><br>
+            <label>Vasa poruka: </label><br>
+                <textarea name="message" id="txtmessage" class="text-style">
+                </textarea>
+            <label for="newsletter">Primaj newsletter: </label> 
+            <input type="checkbox" id="newsletter" name="newsletter" value="newsletter">
+            <br>
+            <input type="submit" value="Pošalji" class="modal-botun">
+            <button data-fancybox-close class="modal-botun2">Odustani</button>
+          </form>
+        </div>
+      </div>
+    
+    
+
+    <div id= "onama"><h1>Novosti</h1><hr></div>
+    <div class="flex-grid-thirds">
+        <a href="novosti-1.html"><div class="col">
+            <p>28.08.2019.<br> Student Josip Stanesic 12. je sistemas svijeta i dobitnik medalje izvrsnosti na natjecanju WoldSkills Kazan 2019.</p>
+        </div></a>
+        <a href="novosti-2.html"><div class="col2">
+            <p>22.07.2019.<br> Nagradujemo izvrsnost: Objavljujemo dobitnike stipendijskog natjecaja sk.god. 2018./2019.</p>
+        </div></a>
+        <a href="novosti-3.html"><div class="col3">
+            <p>18.04.2019.<br> Digitalno Junior ljeto</p>
+        </div></a>
+      </div>
+      
+      <div class="footer">
+        <p>BUDI IZVRSTAN U ONOM ŠTO VOLIŠ</p>
+        <p id="zaiskri">ZAISKRI</p>
+        </div>
+
+<script src="https://cdn.jsdelivr.net/npm/typeit@6.1.1/dist/typeit.min.js"></script>
+
+</body>
+</html>

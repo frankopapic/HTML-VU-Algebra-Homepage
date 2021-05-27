@@ -1,0 +1,318 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+}
+
+@keyframes scale-animation {
+    from {
+      transform: scale(0.3, 0.3);
+    }
+  
+    to {
+      transform: scale(1, 1);
+    }
+  }
+
+  
+.topnav {  
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    align-items: center;
+    z-index: 2;
+}
+
+.topnav > div {
+    margin: 10px;
+}
+.topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    line-height: 3em;
+    margin: 10px 20px;
+    justify-content: center;
+}
+
+.topnav i {
+    color: orange;
+}
+
+#logo {
+    margin-left: 50px;
+    margin-right: 10px;
+    float: left;
+    height: 50px;
+
+}
+
+.container {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    background-color: white;
+    color: black;
+    width: auto;
+    flex-direction: column;
+}
+
+#slika-iz-zraka {
+    width: 100%;
+    height: 400px;
+    background-image: url('img/kampus-iz-zraka-min-1.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#paragraf {
+    text-align: left;
+    background: rgb(247, 247, 247);
+    padding: 4% 0 4% 0;
+    text-align: justify;
+    margin-bottom: 2%;
+}
+
+#paragraf > p{
+    font-size: 25px;
+    font-family: 'Allura', cursive;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#par-podnaslov {
+    text-align: center;
+    color: darkorchid;
+    margin-top: 3%;
+    margin-bottom: 4%;
+}
+
+#onama {
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#onama > hr {
+    border-top: 2px solid orangered;
+}
+
+.flex-grid-thirds {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 6%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    animation: scale-animation 2s;
+  }
+
+.flex-grid-thirds .col {
+    width: 270px;
+    height: 270px;
+    border-style: solid;
+    border-width: 15px;
+    border-radius: 50%;
+    border-color: white;
+    text-align: center;
+    background-image: url(../img/novost1.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    box-shadow: 1px 1px 30px grey;
+  }
+
+.flex-grid-thirds .col > a:link {
+    text-decoration: none;
+}
+
+.flex-grid-thirds .col > p {
+    margin-top: 33%;
+    font-size: 12;
+    color: white;
+    text-shadow: 1px 1px 0px black;
+}
+
+.flex-grid-thirds .col2 {
+    width: 270px;
+    height: 270px;
+    border-style: solid;
+    border-width: 15px;
+    border-radius: 50%;
+    border-color: white;
+    text-align: center;
+    background-image: url(../img/novost2.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    box-shadow: 1px 1px 30px grey;
+
+  }
+
+.flex-grid-thirds .col2 > p {
+    margin-top: 33%;
+    font-size: 12;
+    color: white;
+    text-shadow: 1px 1px 0px black;
+}
+
+
+.flex-grid-thirds .col3 {
+    width: 270px;
+    height: 270px;
+    border-style: solid;
+    border-width: 15px;
+    border-radius: 50%;
+    border-color: white;
+    text-align: center;
+    background-image: url(../img/novost3.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    box-shadow: 1px 1px 30px grey;
+
+  }
+
+.flex-grid-thirds .col3 > p {
+    margin-top: 33%;
+    font-size: 12;
+    color: white;
+    text-shadow: 1px 1px 0px black;
+}
+
+
+.footer {
+    width: 100%;
+    height: 150px;
+    background-image: url('../img/zaiskri-bg.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.footer > p {
+    text-align: center;
+    color:white;
+    font-size: 50px;
+    text-shadow: 2px 2px 0px black;
+    font-family: 'Bebas Neue', cursive;
+}
+
+#zaiskri {
+    color: rgb(224, 0, 75);
+    font-size: 60px;
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: 2px 2px 0px black;
+    line-height: 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .topnav a {
+        line-height: 1.5em;
+        margin: 5px 5px;
+    }
+
+    #logo {
+        height: 30px;
+    }
+    .naslov {
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 1rem;
+    }
+
+    
+    .flex-grid-thirds {
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        animation: scale-animation 2s;
+      }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .topnav a {
+        line-height: 3em;
+        margin: 15px 15px;
+    }
+
+    #logo {
+        height: 50px;
+    }
+
+    .naslov {
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 2rem;
+    }
+
+    .flex-grid-thirds {
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 6%;
+        display: flex;
+        justify-content: space-between;
+
+      }
+    
+    .flex-grid-thirds .col {
+        width: 210px;
+        height: 210px;
+        border-style: solid;
+        border-width: 15px;
+        border-radius: 50%;
+      }
+    
+    .flex-grid-thirds .col > p {
+        margin-top: 33%;
+        font-size: 10px;
+    }
+
+    .flex-grid-thirds .col2 {
+        width: 210px;
+        height: 210px;
+        border-style: solid;
+        border-width: 15px;
+        border-radius: 50%;
+      }
+    
+    .flex-grid-thirds .col2 > p {
+        margin-top: 33%;
+        font-size: 10px;
+    }
+
+    .flex-grid-thirds .col3 {
+        width: 210px;
+        height: 210px;
+        border-style: solid;
+        border-width: 15px;
+        border-radius: 50%;
+      }
+    
+    .flex-grid-thirds .col3 > p {
+        margin-top: 33%;
+        font-size: 10px;
+    }
+    
+
+}
+@media screen and (min-width: 1600px) {
+    .topnav a {
+        line-height: 3em;
+        margin: 10px 20px;
+    }
+
+    #logo {
+        height: 60px;
+    }
+}

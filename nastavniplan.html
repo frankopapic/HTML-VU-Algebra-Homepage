@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="nastavniplan.css">
+    <link rel="stylesheet" type="text/css" href="modal.css">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Allura|Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ecb9b4e009.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+        integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+
+    <title>Algebra VU</title>
+</head>
+
+<body>
+
+
+    <div class="topnav">
+        <div class="logo">
+            <a href="#"><img id=logo src="img/logo.png"></a>
+        </div>
+        <div class="linkovi">
+            <a href="index.html"><i class="fas fa-home"></i> Pocetna</a>
+            <a href="o-nama.html"><i class="far fa-comments"></i> O nama</a>
+            <a href="novosti/novosti.html"><i class="fas fa-info-circle"></i> Novosti</a>
+            <a href="#"><i class="fas fa-info-circle"></i> Nastavni plan</a>
+            <a data-fancybox data-src="#modal" href="javascript:;"><i class="fas fa-envelope"></i> Kontakt</a>
+        </div>
+    </div>
+
+<!-- MODALNI PROZOR-->
+<div style="display: none;" id="modal" class="modal-box">
+    <div id="modal-naslov"><h1><i class="fas fa-envelope"></i> Kontaktirajte nas</h1></div>
+    <hr>
+    <div class="modal-forma-div">
+    <form action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="post">
+        <label for="ime">Puno ime:</label><br>
+        <input type="text" id="txtname" name="name" class="input-style"><br>
+        <label for="prezime">E-mail:</label><br>
+        <input type="text" id="txtemail" name="email"class="input-style"><br>
+        <label>Vaznost poruke:</label><br>
+            <select id="lista" name="importance" class="input-style">
+                <option value = "high">Visoka</option>
+                <option value = "low">Niska</option>
+            </select><br>
+        <label>Vasa poruka: </label><br>
+            <textarea name="message" id="txtmessage" class="text-style">
+            </textarea>
+        <label for="newsletter">Primaj newsletter: </label> 
+        <input type="checkbox" id="newsletter" name="newsletter" value="newsletter">
+        <br>
+        <input type="submit" value="Pošalji" class="modal-botun">
+        <button data-fancybox-close class="modal-botun2">Odustani</button>
+      </form>
+    </div>
+  </div>
+
+
+    <div class="container">
+        <h1 class="naslov">Nastavni plan</h1>
+        <hr>
+        <div class="row">
+          <div class="col">
+              <p>Upisite naziv kolegija:</p>
+            <input type="text" name="search" id="autocomplete-field">
+          </div>
+          <div class="col">
+            <div class="table-results">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Kolegij</th>
+                            <th>ECTS</th>
+                            <th>Sati</th>
+                            <th>P</th>
+                            <th>V</th>
+                            <th>Tip</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Ukupno</th>
+                            <th id="suma-ects"></th>
+                            <th id="suma-sati"></th>
+                        </tr>
+                        
+                    </tfoot>
+                </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="js/autocomplete.js"></script>
+    <div class="footer">
+        <p>BUDI IZVRSTAN U ONOM ŠTO VOLIŠ</p>
+        <p id="zaiskri">ZAISKRI</p>
+    </div>
+
+   
+
+   
+
+
+<script src="https://cdn.jsdelivr.net/npm/typeit@6.1.1/dist/typeit.min.js"></script>
+
+</body>
+
+</html>
